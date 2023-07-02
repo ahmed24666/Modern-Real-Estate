@@ -25,25 +25,25 @@ const Nav = () => {
                 </Offcanvas.Header>
                 <Offcanvas.Body className='d-flex flex-column align-items-center justify-content-center'>
                     <div className="link mb-5">
-                        <Link className='d-flex align-items-center justify-content-center gap-3 fs-3'>
+                        <Link className='d-flex align-items-center justify-content-center gap-3 fs-3' onClick={handleClose}>
                             <FcHome/>
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Home</h1>
                         </Link>
                     </div>
                     <div className="link mb-5">
-                        <Link className='d-flex align-items-center justify-content-center gap-3 fs-4'>
+                        <Link to='/search' className='d-flex align-items-center justify-content-center gap-3 fs-4' onClick={handleClose}>
                             <BsSearch/>
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Search</h1>
                         </Link>
                     </div>
                     <div className="link mb-5">
-                        <Link className='d-flex align-items-center justify-content-center gap-3 fs-3'>
+                        <Link to='/search?for-sale' className='d-flex align-items-center justify-content-center gap-3 fs-3' onClick={handleClose}>
                             <FcAbout/>
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Buy Property</h1>
                         </Link>
                     </div>
                     <div className="link mb-5">
-                        <Link className='d-flex align-items-center justify-content-center gap-3 fs-3'>
+                        <Link to='/search?for-rent' className='d-flex align-items-center justify-content-center gap-3 fs-3' onClick={handleClose}>
                             <FiKey/>
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Rent Property</h1>
                         </Link>

@@ -4,7 +4,24 @@ import './app.scss'
 import Properties from "./Component/Properties/Properties";
 import Nav from "./Component/Nav/Nav";
 import Footer from "./Component/Footer/Footer";
+import Search from "./Pages/Search";
+import { getProperties } from "./utils/fetchApi";
+import { useEffect, useState } from "react";
 function App() {
+
+  const [propertiesForSale, setPropertiesForSale] = useState([])
+  const [propertiesForRent, setPropertiesForRent] = useState([])
+  // useEffect(() => {
+  //   // get properties for sale 
+  //   getProperties('properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6').then((data)=>{
+  //     setPropertiesForSale(data.hits)
+  //     console.log(data.hits)
+  //   })    
+  //   // get properties for rent 
+  //   getProperties('properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6').then((data)=>{
+  //     setPropertiesForRent(data.hits)
+  //   })    
+  // }, [])
 
   const Layout = () => {
     return (
@@ -24,11 +41,15 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />
+          element: <Home propertiesForSale={propertiesForSale} propertiesForRent={propertiesForRent} />
         },
         {
           path: "/properties/:id",
           element: <Home/>
+        },
+        {
+          path: "/search",
+          element: <Search />
         }
       ]
     }

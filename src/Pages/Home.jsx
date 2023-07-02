@@ -2,20 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Banner from '../Component/Banner/Banner'
 import { getProperties } from '../utils/fetchApi'
 import Properties from '../Component/Properties/Properties'
-const Home = () => {
-  const [propertiesForSale, setPropertiesForSale] = useState([])
-  const [propertiesForRent, setPropertiesForRent] = useState([])
-  // useEffect(() => {
-  //   // get properties for sale 
-  //   getProperties('properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6').then((data)=>{
-  //     setPropertiesForSale(data.hits)
-  //     console.log(data.hits)
-  //   })    
-  //   // get properties for rent 
-  //   getProperties('properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6').then((data)=>{
-  //     setPropertiesForRent(data.hits)
-  //   })    
-  // }, [])
+const Home = ({propertiesForRent,propertiesForSale}) => {
+  
   
   return (
     <div>
