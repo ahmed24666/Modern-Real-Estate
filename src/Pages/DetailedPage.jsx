@@ -65,7 +65,7 @@ const DetailedPage = () => {
                     </div>
                 </div>
                 <div className="d-flex p-2 pt-4 align-items-center justify-content-between text-primary">
-                    {property?.rooms}<FaBed /> | {property?.baths}<FaBath /> | {millify(property?.area)} sqft<BsGridFill />
+                    {property?.rooms}<FaBed /> | {property?.baths}<FaBath /> | {property?.area===undefined?'':millify(property?.area)} sqft<BsGridFill />
                 </div>
                 <div className="d-flex p-2 pt-4 align-items-center justify-content-center text-center text-black fs-5">
                     {property.title}
