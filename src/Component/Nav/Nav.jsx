@@ -6,7 +6,7 @@ import { BsSearch } from "react-icons/bs";
 import { FiKey } from "react-icons/fi";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
-const Nav = () => {
+const Nav = ({ purpose, setpurpose }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -26,25 +26,25 @@ const Nav = () => {
                 <Offcanvas.Body className='d-flex flex-column align-items-center justify-content-center'>
                     <div className="link mb-5">
                         <Link className='d-flex align-items-center justify-content-center gap-3 fs-3' onClick={handleClose}>
-                            <FcHome/>
+                            <FcHome />
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Home</h1>
                         </Link>
                     </div>
                     <div className="link mb-5">
                         <Link to='/search' className='d-flex align-items-center justify-content-center gap-3 fs-4' onClick={handleClose}>
-                            <BsSearch/>
+                            <BsSearch />
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Search</h1>
                         </Link>
                     </div>
-                    <div className="link mb-5">
-                        <Link to='/search?for-sale' className='d-flex align-items-center justify-content-center gap-3 fs-3' onClick={handleClose}>
-                            <FcAbout/>
+                    <div className="link mb-5" onClick={() => setpurpose('&purpose=for-sale')}>
+                    <Link to='/search' className='d-flex align-items-center justify-content-center gap-3 fs-3' style={{cursor:'pointer'}} onClick={handleClose} >
+                            <FiKey />
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Buy Property</h1>
                         </Link>
                     </div>
-                    <div className="link mb-5">
-                        <Link to='/search?for-rent' className='d-flex align-items-center justify-content-center gap-3 fs-3' onClick={handleClose}>
-                            <FiKey/>
+                    <div className="link mb-5" onClick={() => setpurpose('&purpose=for-rent')}>
+                        <Link to='/search' className='d-flex align-items-center justify-content-center gap-3 fs-3' style={{cursor:'pointer'}} onClick={handleClose} >
+                            <FiKey />
                             <h1 className="logo fs-3" style={{ color: '#607D8B' }}>Rent Property</h1>
                         </Link>
                     </div>

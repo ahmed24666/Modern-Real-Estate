@@ -7,26 +7,29 @@ import Footer from "./Component/Footer/Footer";
 import Search from "./Pages/Search";
 import { getProperties } from "./utils/fetchApi";
 import { useEffect, useState } from "react";
+import DetailedPage from "./Pages/DetailedPage";
 function App() {
 
   const [propertiesForSale, setPropertiesForSale] = useState([])
   const [propertiesForRent, setPropertiesForRent] = useState([])
-  // useEffect(() => {
-  //   // get properties for sale 
-  //   getProperties('properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6').then((data)=>{
-  //     setPropertiesForSale(data.hits)
-  //     console.log(data.hits)
-  //   })    
-  //   // get properties for rent 
-  //   getProperties('properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6').then((data)=>{
-  //     setPropertiesForRent(data.hits)
-  //   })    
-  // }, [])
+  const [purpose, setpurpose] = useState(null)
+
+  useEffect(() => {
+    // // get properties for sale 
+    // getProperties('properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6').then((data)=>{
+    //   setPropertiesForSale(data.hits)
+    //   console.log(data.hits)
+    // })    
+    // // get properties for rent 
+    // getProperties('properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6').then((data)=>{
+    //   setPropertiesForRent(data.hits)
+    // })    
+  }, [])
 
   const Layout = () => {
     return (
       <div className="app">
-        <Nav/>
+        <Nav purpose={purpose} setpurpose={setpurpose} />
         <Outlet />
         <Footer/>
       </div>
@@ -45,11 +48,11 @@ function App() {
         },
         {
           path: "/properties/:id",
-          element: <Home/>
+          element: <DetailedPage/>
         },
         {
           path: "/search",
-          element: <Search />
+          element: <Search purpose={purpose} setpurpose={setpurpose} />
         }
       ]
     }

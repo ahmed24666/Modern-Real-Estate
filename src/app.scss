@@ -20,3 +20,17 @@ img{
     height: 200px;
     }
 }
+.cardP{
+    width: 420px;
+
+    @media (max-width:450px) {
+        width: 270px;
+    }
+    .image{
+        height: 250px;
+        @media (max-width:450px) {
+            height: 200px;
+        }
+    }
+}
+

@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 const Properties = ({property}) => {
   return (
 
-    <Link to={`/properties/${property.id}`}>
-        <div className='d-flex flex-wrap p-2 p-md-5 pt-0 justify-content-center' style={{width:'420px',cursor:'pointer'}}>
-            <div className="image" style={{height:'250px',}}>
+    <Link to={`/properties/${property.externalID}`}>
+        <div className='cardP d-flex flex-wrap p-2 p-md-5 pt-0 justify-content-center' style={{cursor:'pointer'}}>
+            <div className="image" >
                 <img src={property.coverPhoto?property.coverPhoto.url:'/images/house.webp'} style={{objectFit:'cover'}} alt="" />
             </div>
             <div className="w-100">
