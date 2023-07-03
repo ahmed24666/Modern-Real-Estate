@@ -58,7 +58,7 @@ const DetailedPage = () => {
                 <div className="d-flex p-2 align-items-center justify-content-between">
                     <div className="d-flex align-items-center ">
                         <div className="pe-3 text-success">{property?.isVerified && <GoVerified />}</div>
-                        <div className="fw-bold fs-5">AED {millify(property?.price)}{property?.rentFrequency && `/${property?.rentFrequency}`}</div>
+                        <div className="fw-bold fs-5">AED {property?.price===undefined?'':millify(property?.price)}{property?.rentFrequency && `/${property?.rentFrequency}`}</div>
                     </div>
                     <div className='' style={{ height: '35px', maxWidth: '30%' }}>
                         <img src={property?.agency?.logo?.url} alt="" className="avatar" />
