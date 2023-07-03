@@ -26,12 +26,12 @@ const Search = ({ purpose, setpurpose }) => {
     const [bathsMin, setbathsMin] = useState(null)
     useEffect(() => {
         setloading(true)
-        // get properties for rent 
-        getProperties(`properties/list?locationExternalIDs=5002${purpose !== null ? purpose : ''}&hitsPerPage=25&page=${page}${sort !== null ? sort : ''}${rentFrequency !== null ? rentFrequency : ''}${category !== null ? category : ''}${priceMin !== null ? priceMin : ''}${priceMax !== null ? priceMax : ''}${areaMin !== null ? areaMin : ''}${areaMax !== null ? areaMax : ''}${roomsMin !== null ? roomsMin : ''}${bathsMin !== null ? bathsMin : ''}`).then((data) => {
-            setProperties(data.hits)
-            console.log(data)
-            setloading(false)
-        })
+        // // get properties for rent 
+        // getProperties(`properties/list?locationExternalIDs=5002${purpose !== null ? purpose : ''}&hitsPerPage=25&page=${page}${sort !== null ? sort : ''}${rentFrequency !== null ? rentFrequency : ''}${category !== null ? category : ''}${priceMin !== null ? priceMin : ''}${priceMax !== null ? priceMax : ''}${areaMin !== null ? areaMin : ''}${areaMax !== null ? areaMax : ''}${roomsMin !== null ? roomsMin : ''}${bathsMin !== null ? bathsMin : ''}`).then((data) => {
+        //     setProperties(data.hits)
+        //     console.log(data)
+        //     setloading(false)
+        // })
 
     }, [purpose, page, sort, rentFrequency, category, priceMin, priceMax, areaMin, areaMax, roomsMin, bathsMin])
     return (
