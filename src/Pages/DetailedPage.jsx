@@ -24,17 +24,17 @@ const DetailedPage = () => {
     const [loading, setloading] = useState(false)
     const Id = useParams()
     const [property, setProperty] = useState([])
-    // useEffect(() => {
-    //     setloading(true)
-    //     console.log(Id.id)
-    //     // get properties for rent 
-    //     getProperties(`properties/detail?externalID=${Id.id}`).then((data) => {
-    //         console.log(data)
-    //         setProperty(data)
-    //         setloading(false)
-    //     })
+    useEffect(() => {
+        setloading(true)
+        console.log(Id.id)
+        // get properties for rent 
+        getProperties(`properties/detail?externalID=${Id.id}`).then((data) => {
+            console.log(data)
+            setProperty(data)
+            setloading(false)
+        })
 
-    // }, [])
+    }, [])
     return (
         <div className="">
             {
