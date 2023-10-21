@@ -49,8 +49,10 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setpurpose('&purpose=for-sale')}>Buy</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setpurpose('&purpose=for-rent')}>Rent</Dropdown.Item>
+                                <Dropdown.Item >Buy</Dropdown.Item>
+                                <Dropdown.Item >Rent</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setpurpose('&purpose=for-sale')}>Buy</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setpurpose('&purpose=for-rent')}>Rent</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -59,10 +61,14 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setrentFrequency('&rentFrequency=daily')}>Daily</Dropdown.Item>
+                                <Dropdown.Item >Daily</Dropdown.Item>
+                                <Dropdown.Item >Weekly</Dropdown.Item>
+                                <Dropdown.Item >Monthly</Dropdown.Item>
+                                <Dropdown.Item >Yearly</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setrentFrequency('&rentFrequency=daily')}>Daily</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setrentFrequency('&rentFrequency=weekly')}>Weekly</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setrentFrequency('&rentFrequency=monthly')}>Monthly</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setrentFrequency('&rentFrequency=yearly')}>Yearly</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setrentFrequency('&rentFrequency=yearly')}>Yearly</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -71,14 +77,22 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setpriceMin('&priceMin=5000')}>5000</Dropdown.Item>
+                                <Dropdown.Item >5000</Dropdown.Item>
+                                <Dropdown.Item >10000</Dropdown.Item>
+                                <Dropdown.Item >20000</Dropdown.Item>
+                                <Dropdown.Item >30000</Dropdown.Item>
+                                <Dropdown.Item >40000</Dropdown.Item>
+                                <Dropdown.Item >50000</Dropdown.Item>
+                                <Dropdown.Item >60000</Dropdown.Item>
+                                <Dropdown.Item >70000</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setpriceMin('&priceMin=5000')}>5000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMin('&priceMin=10000')}>10000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMin('&priceMin=20000')}>20000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMin('&priceMin=30000')}>30000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMin('&priceMin=40000')}>40000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMin('&priceMin=50000')}>50000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMin('&priceMin=60000')}>60000</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setpriceMin('&priceMin=70000')}>70000</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setpriceMin('&priceMin=70000')}>70000</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -87,7 +101,17 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setpriceMax('&priceMax=110000')}>110000</Dropdown.Item>
+                                <Dropdown.Item >110000</Dropdown.Item>
+                                <Dropdown.Item >200000</Dropdown.Item>
+                                <Dropdown.Item >300000</Dropdown.Item>
+                                <Dropdown.Item >400000</Dropdown.Item>
+                                <Dropdown.Item >500000</Dropdown.Item>
+                                <Dropdown.Item >600000</Dropdown.Item>
+                                <Dropdown.Item >700000</Dropdown.Item>
+                                <Dropdown.Item >800000</Dropdown.Item>
+                                <Dropdown.Item >900000</Dropdown.Item>
+                                <Dropdown.Item >1000000</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setpriceMax('&priceMax=110000')}>110000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMax('&priceMax=200000')}>200000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMax('&priceMax=300000')}>300000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMax('&priceMax=400000')}>400000</Dropdown.Item>
@@ -96,7 +120,7 @@ const Search = ({ purpose, setpurpose }) => {
                                 <Dropdown.Item onClick={() => setpriceMax('&priceMax=700000')}>700000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMax('&priceMax=800000')}>800000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setpriceMax('&priceMax=900000')}>900000</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setpriceMax('&priceMax=1000000')}>1000000</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setpriceMax('&priceMax=1000000')}>1000000</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -105,11 +129,16 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setsort('&sort=price-desc')}>Price Desc</Dropdown.Item>
+                                <Dropdown.Item >Price Desc</Dropdown.Item>
+                                <Dropdown.Item >Price Asc</Dropdown.Item>
+                                <Dropdown.Item >City Level</Dropdown.Item>
+                                <Dropdown.Item >Date Desc</Dropdown.Item>
+                                <Dropdown.Item >Verified</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setsort('&sort=price-desc')}>Price Desc</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setsort('&sort=price-asc')}>Price Asc</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setsort('&sort=city-level-score')}>City Level</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setsort('&sort=date-desc')}>Date Desc</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setsort('&sort=verified')}>Verified</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setsort('&sort=verified')}>Verified</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -118,11 +147,16 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setareaMin('&areaMin=200')}>100</Dropdown.Item>
+                                <Dropdown.Item >100</Dropdown.Item>
+                                <Dropdown.Item >150</Dropdown.Item>
+                                <Dropdown.Item >200</Dropdown.Item>
+                                <Dropdown.Item >250</Dropdown.Item>
+                                <Dropdown.Item >300</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setareaMin('&areaMin=200')}>100</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMin('&areaMin=150')}>150</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMin('&areaMin=200')}>200</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMin('&areaMin=250')}>250</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setareaMin('&areaMin=300')}>300</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setareaMin('&areaMin=300')}>300</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -131,13 +165,20 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setareaMax('&areaMax=1000')}>1000</Dropdown.Item>
+                                <Dropdown.Item>1000</Dropdown.Item>
+                                <Dropdown.Item >2000</Dropdown.Item>
+                                <Dropdown.Item >3000</Dropdown.Item>
+                                <Dropdown.Item >4000</Dropdown.Item>
+                                <Dropdown.Item >5000</Dropdown.Item>
+                                <Dropdown.Item >10000</Dropdown.Item>
+                                <Dropdown.Item >20000</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setareaMax('&areaMax=1000')}>1000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMax('&areaMax=2000')}>2000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMax('&areaMax=3000')}>3000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMax('&areaMax=4000')}>4000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMax('&areaMax=5000')}>5000</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setareaMax('&areaMax=10000')}>10000</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setareaMax('&areaMax=20000')}>20000</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setareaMax('&areaMax=20000')}>20000</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -146,10 +187,14 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setbathsMin('&bathsMin=1')}>1</Dropdown.Item>
+                                <Dropdown.Item>1</Dropdown.Item>
+                                <Dropdown.Item>2</Dropdown.Item>
+                                <Dropdown.Item>3</Dropdown.Item>
+                                <Dropdown.Item>4</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setbathsMin('&bathsMin=1')}>1</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setbathsMin('&bathsMin=2')}>2</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setbathsMin('&bathsMin=3')}>3</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setbathsMin('&bathsMin=4')}>4</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setbathsMin('&bathsMin=4')}>4</Dropdown.Item> */}
                             </Dropdown.Menu>
                         </Dropdown>
                         <Dropdown>
@@ -173,12 +218,18 @@ const Search = ({ purpose, setpurpose }) => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => setcategory('&categoryExternalID=4')}>Apartment</Dropdown.Item>
+                                <Dropdown.Item >Apartment</Dropdown.Item>
+                                <Dropdown.Item >Townhouses</Dropdown.Item>
+                                <Dropdown.Item >Villas</Dropdown.Item>
+                                <Dropdown.Item >Penthouses</Dropdown.Item>
+                                <Dropdown.Item >Hotel Apartments</Dropdown.Item>
+                                <Dropdown.Item >Villa Compound</Dropdown.Item>
+                                {/* <Dropdown.Item onClick={() => setcategory('&categoryExternalID=4')}>Apartment</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setcategory('&categoryExternalID=16')}>Townhouses</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setcategory('&categoryExternalID=3')}>Villas</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setcategory('&categoryExternalID=18')}>Penthouses</Dropdown.Item>
                                 <Dropdown.Item onClick={() => setcategory('&categoryExternalID=21')}>Hotel Apartments</Dropdown.Item>
-                                <Dropdown.Item onClick={() => setcategory('&categoryExternalID=19')}>Villa Compound</Dropdown.Item>
+                                <Dropdown.Item onClick={() => setcategory('&categoryExternalID=19')}>Villa Compound</Dropdown.Item> */}
 
                             </Dropdown.Menu>
                         </Dropdown>

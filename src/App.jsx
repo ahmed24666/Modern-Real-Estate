@@ -57,10 +57,10 @@ function App() {
           path: "/",
           element: <Home propertiesForSale={propertiesForSale} propertiesForRent={propertiesForRent} />
         },
-        {
-          path: "/properties/:id",
-          element: <DetailedPage />
-        },
+        // {
+        //   path: "/properties/:id",
+        //   element: <DetailedPage />
+        // },
         {
           path: "/search",
           element: <Search purpose={purpose} setpurpose={setpurpose} />
